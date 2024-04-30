@@ -12,3 +12,10 @@ It's available at [libRuntimeLibrary.so](artifacts%2FlibRuntimeLibrary.so).
 The OAX conversion toolchain is available as a Docker image that can be used to convert non-optimized models to
 optimized models. Due to its significant size, the Docker image is available for
 download [here](https://download.sclbl.net/OAX/toolchains/conversion-toolchain-latest.tar).
+
+## Compatibility
+
+The OAX toolchain can work on any x86_64 machine that has Docker installed.  
+However, for the runtime, the following are the minimum requirements:
+- Ubuntu 18.04 or later
+- x86_64 CPU
