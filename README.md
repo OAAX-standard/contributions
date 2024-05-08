@@ -21,9 +21,9 @@ load and run the optimized model on that machine using his/her application.
 > **Note**: We provide a set of off-the-shelf examples in C and Python that demonstrate how to use the runtime to load
 > and run an optimized model in the [examples](https://github.com/oax-standard/examples) repository.
 
-| AI Accelerator    | Target Architecture | Runtime file                          | Conversion toolchain                                                                      | Documentation               |
-|-------------------|---------------------|---------------------------------------|-------------------------------------------------------------------------------------------|-----------------------------|
-| Intel/AMD CPU     | x86_64              | [Artifacts](CPU%20X86_64%2Fartifacts) | [Docker image](https://download.sclbl.net/OAX/toolchains/conversion-toolchain-latest.tar) | [README](X86_64/README.md)  |
-| Hailo-8 (v4.16.0) | x86_64              | [Artifacts](Hailo-8%2Fartifacts)      | [Docker image](https://download.sclbl.net/OAX/toolchains/onnx-to-hailo-latest.tar)        | [README](Hailo-8/README.md) |
+| AI Accelerator    | Target Architecture | Runtime file                          | Conversion toolchain                                                                      | Documentation                      |
+|-------------------|---------------------|---------------------------------------|-------------------------------------------------------------------------------------------|------------------------------------|
+| Intel/AMD CPU     | x86_64              | [Artifacts](CPU%20X86_64%2Fartifacts) | [Docker image](https://download.sclbl.net/OAX/toolchains/conversion-toolchain-latest.tar) | [README](CPU%20X86_64%2FREADME.md) |
+| Hailo-8 (v4.16.0) | x86_64              | [Artifacts](Hailo-8%2Fartifacts)      | [Docker image](https://download.sclbl.net/OAX/toolchains/onnx-to-hailo-latest.tar)        | [README](Hailo-8/README.md)        |
 
 [//]: # (| Nvidia &#40;CUDA 11&#41;  | x86_64               | Coming soon                           | Coming soon                                                                               | [README]&#40;Hailo-8/README.md&#41; |)
