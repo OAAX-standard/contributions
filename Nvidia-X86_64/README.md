@@ -3,25 +3,25 @@
 This folder contains the shared library and the Docker image that can be used by users and application developers to
 benefit from the acceleration offered by Nvidia GPUs (both CUDA 11 & 12 versions).
 
-The OAX conversion toolchain takes in any ONNX model, validates it, then optimizes it. Hence, the resulting model file
+The OAAX conversion toolchain takes in any ONNX model, validates it, then optimizes it. Hence, the resulting model file
 is an ONNX model that's optimized and efficient for deployment.
 
-On the other hand, the OAX Runtime is leveraging ONNXRuntime under the hood with the CUDA EP, hence the runtime expects
+On the other hand, the OAAX Runtime is leveraging ONNXRuntime under the hood with the CUDA EP, hence the runtime expects
 the model to be an ONNX.
 
 ## Artifacts
 
-The OAX runtime is available as a shared library, but it depends on other shared libraries that are all available here:
-- [CUDA 11](https://download.sclbl.net/OAX/runtimes/CUDA-11/)
-- [CUDA 12](https://download.sclbl.net/OAX/runtimes/CUDA-12/)
+The OAAX runtime is available as a shared library, but it depends on other shared libraries that are all available here:
+- [CUDA 11](https://download.sclbl.net/OAAX/runtimes/CUDA-11/)
+- [CUDA 12](https://download.sclbl.net/OAAX/runtimes/CUDA-12/)
 
 > Make sure all files are present in the same directory when using the runtime library, or that they accessible to the 
 runtime library by setting the `LD_LIBRARY_PATH` environment variable.
 > Also, make sure that CUDA-X libraries are installed on the target machine.
 
-The OAX conversion toolchain is available as a Docker image that can be used to convert non-optimized models to
+The OAAX conversion toolchain is available as a Docker image that can be used to convert non-optimized models to
 optimized models. Due to its significant size, the Docker image is available for
-download [here](https://download.sclbl.net/OAX/toolchains/conversion-toolchain-latest.tar).
+download [here](https://download.sclbl.net/OAAX/toolchains/conversion-toolchain-latest.tar).
 
 ## How to use
 
@@ -45,4 +45,4 @@ Upon success, the optimized model will be located in `./build` folder in the hos
 ### Runtime
 
 To use the runtime to run that optimized model, you can refer to any example in
-the [examples](https://github.com/oax-standard/examples) repository.
+the [examples](https://github.com/oaax-standard/examples) repository.
