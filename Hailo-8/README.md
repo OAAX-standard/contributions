@@ -5,16 +5,16 @@ benefit from the acceleration offered by Hailo-8 chip on x86_64 machines with v4
 
 ## Artifacts
 
-The OAX runtime is available as a shared library that can be used by developers to load and run optimized models on
+The OAAX runtime is available as a shared library that can be used by developers to load and run optimized models on
 a Hailo-8 AI Accelerator.
 It's available at [libRuntimeLibrary.so](artifacts%2FlibRuntimeLibrary.so). 
 > Please note, that the runtime library depends on the other 3 shared libraries that are available in the 
 same directory. Make sure all files are present in the same directory when using the runtime library.  
 
-The OAX conversion toolchain is available as a Docker image that can be used to convert non-optimized models to
+The OAAX conversion toolchain is available as a Docker image that can be used to convert non-optimized models to
 optimized models.    
 Due to its significant size, the Docker image is available for
-download [here](https://download.sclbl.net/OAX/toolchains/onnx-to-hailo-latest.tar).
+download [here](https://download.sclbl.net/OAAX/toolchains/onnx-to-hailo-latest.tar).
 
 ## Usage
 
@@ -78,5 +78,5 @@ docker run -v /path/to/hailo-deps:/app/hailo-deps \
 To use the runtime library, you need to have the version v1.16.0 of the Hailo-8 driver installed on your X86_64 machine.
 
 The Hailo runtime can be used just like the other runtimes. You can find various and diverse usage examples in
-the [examples](https://github.com/oax-standard/examples) repository.
+the [examples](https://github.com/oaax-standard/examples) repository.
 
