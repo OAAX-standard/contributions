@@ -1,7 +1,7 @@
-# Nvidia X86_64
+# Nvidia
 
 This folder contains the shared library and the Docker image that can be used by users and application developers to
-benefit from the acceleration offered by Nvidia GPUs (both CUDA 11 & 12 versions).
+benefit from the acceleration offered by Nvidia GPUs and DLAs (for both x86 and arm64).
 
 The OAAX conversion toolchain takes in any ONNX model, validates it, then optimizes it. Hence, the resulting model file
 is an ONNX model that's optimized and efficient for deployment.
@@ -12,8 +12,12 @@ the model to be an ONNX.
 ## Artifacts
 
 The OAAX runtime is available as a shared library, but it depends on other shared libraries that are all available here:
-- [CUDA 11](https://download.sclbl.net/OAAX/runtimes/CUDA-11/)
-- [CUDA 12](https://download.sclbl.net/OAAX/runtimes/CUDA-12/)
+- x86:
+    - [CUDA 11](https://download.sclbl.net/OAAX/runtimes/nightly/nvidia-cuda_11-x86_64-ort.tar.gz)
+    - [CUDA 12](https://download.sclbl.net/OAAX/runtimes/nightly/nvidia-cuda_12-x86_64-ort.tar.gz)
+- arm64:
+    - [CUDA 10](https://download.sclbl.net/OAAX/runtimes/nightly/nvidia-cuda_10-aarch64-ort.tar.gz)
+    - [CUDA 11](https://download.sclbl.net/OAAX/runtimes/nightly/nvidia-cuda_11-aarch64-ort.tar.gz)
 
 > Make sure all files are present in the same directory when using the runtime library, or that they accessible to the 
 runtime library by setting the `LD_LIBRARY_PATH` environment variable.
