@@ -19,7 +19,7 @@ It's available for:
 The OAAX conversion toolchain is available as a Docker image that can be used to convert non-optimized models to
 optimized models. Due to its significant size, the Docker image is made available for
 download [here](https://download.sclbl.net/OAAX/toolchains/onnx-to-mxa.tar).
-
+> Please note that you'll need to have credentials from MemryX to able to install the MemryX SDK when running the conversion.
 ## How to use
 
 ### Conversion toolchain
@@ -34,7 +34,7 @@ After that, you can use the Docker image to create a container that carries out 
 assuming that you have a model named `model.onnx` in the current directory):
 
 ```shell
-docker run -v "$pwd:/root" conversion-toolchain "/root/model.onnx" "/root/build"
+docker run -it -v "$pwd:/root" conversion-toolchain "/root/model.onnx" "/root/build"
 ```
 
 Upon success, the optimized model (along with additional pre/post processing files) will be located in `./build` folder in the host filesystem in a ZIP archive.
