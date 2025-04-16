@@ -1,25 +1,4 @@
-# Intel
-
-This folder contains the shared library and the Docker image that can be used by users and application developers to
-benefit from the acceleration offered by Intel CPUs (and GPUs).
-
-The OAAX conversion toolchain takes in any ONNX model, validates it, then optimizes it. Hence, the resulting model file
-is an ONNX model that's optimized and efficient for deployment.
-
-On the other hand, the OAAX Runtime is leveraging ONNXRuntime under the hood. It expects the model to an ONNX.
-
-## Artifacts
-
-The OAAX runtime is available as a shared library that can be used by developers to load and run optimized models on
-x86_64.
-It's available in this [archive](https://download.sclbl.net/OAAX/runtimes/nightly/cpu-x86_64-openvino.tar.gz), along with additional dependencies.
-
-> Make sure all files are present in the same directory when using the runtime library, or that they accessible to the 
-runtime library by setting the `LD_LIBRARY_PATH` environment variable.
-
-The OAAX conversion toolchain is available as a Docker image that can be used to convert non-optimized models to
-optimized models. Due to its significant size, the Docker image is available for
-download [here](https://download.sclbl.net/OAAX/toolchains/conversion-toolchain-latest.tar).
+# Intel OpenVINO
 
 ## How to use
 
@@ -35,7 +14,7 @@ After that, you can use the Docker image to create a container that carries out 
 assuming that you have a model named `model.onnx` in the current directory):
 
 ```shell
-docker run -v ".:/app/run" conversion-toolchain "/app/run/model.onnx" "/app/run/build"
+docker run --rm -v ".:/app/run" conversion-toolchain "/app/run/model.onnx" "/app/run/build"
 ```
 
 Upon success, the optimized model will be located in `./build` folder in the host filesystem.

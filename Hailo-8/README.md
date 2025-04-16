@@ -1,20 +1,4 @@
-# Hailo-8 on X86_64
-
-This folder contains the shared library and the Docker image that can be used by users and application developers to
-benefit from the acceleration offered by Hailo-8 chip on x86_64 machines with v4.16.0 of the driver.
-
-## Artifacts
-
-The OAAX runtime is available as a shared library that can be used by developers to load and run optimized models on
-a Hailo-8 AI Accelerator.
-It's available at [libRuntimeLibrary.so](artifacts%2FlibRuntimeLibrary.so). 
-> Please note, that the runtime library depends on the other 3 shared libraries that are available in the 
-same directory. Make sure all files are present in the same directory when using the runtime library.  
-
-The OAAX conversion toolchain is available as a Docker image that can be used to convert non-optimized models to
-optimized models.    
-Due to its significant size, the Docker image is available for
-download [here](https://download.sclbl.net/OAAX/toolchains/onnx-to-hailo-latest.tar).
+# Hailo-8
 
 ## Usage
 
@@ -36,7 +20,7 @@ docker run -v /path/to/hailo-deps:/app/hailo-deps ...
 ```
 
 Now, the remaining part of the puzzle is running the conversion toolchain with the model you want to convert.
-Hailo's toolchain expects the input file to be a zipped file containing:
+Hailo's toolchain expects the input file to be an archive file containing:
 
 - ONNX model
 - A folder containing a set of images to use for calibration
@@ -67,7 +51,7 @@ Hailo's toolchain expects the input file to be a zipped file containing:
 The command to run the conversion toolchain (after loading it from the tarball file) is as follows:
 
 ```bash
-docker run -v /path/to/hailo-deps:/app/hailo-deps \
+docker run --rm -v /path/to/hailo-deps:/app/hailo-deps \
     -v /path/to/input:/app/input \
     -v /path/to/output:/app/output \
     onnx-to-hailo:latest /app/input/input.zip /app/output
