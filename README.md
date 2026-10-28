@@ -1,5 +1,12 @@
 # Contributions
 
+> **This repository is archived and no longer maintained.**
+> It will not receive updates, issues or pull requests. The runtimes and conversion toolchains
+> listed below target OAAX 1.x and do not work with OAAX 2.0. The download links may stop working.
+>
+> To list and fetch OAAX 2.0 runtimes and toolchains, use
+> [oaax-manager](https://github.com/OAAX-standard/oaax-manager).
+
 This repository contains OAAX artifacts contributed by the community.
 The contributions are organized into folders, each of which contains a README file that describes the contribution and
 how to use it, as each AI accelerator has its own specific requirements for the model it can run, configuration of the
